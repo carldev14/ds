@@ -172,7 +172,8 @@ def Input_details(input_str):
     tin_number_input = TIN()
     TotalAmountPaid = float(prompt('\nEnter the Total Amount Paid: '))
     InputVat = float(prompt('\nEnter the Input Vat: '))
-    CPS = TotalAmountPaid - InputVat 
+    CPS_result = TotalAmountPaid - InputVat
+    CPS = round(CPS_result, 2)
     worksheet = ChoiceSheet(str(month).zfill(2), workbook)
     
     
